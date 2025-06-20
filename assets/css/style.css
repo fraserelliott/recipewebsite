@@ -65,6 +65,9 @@ header {
     width: 200px;
 }
 
+button.disabled {
+    color: darkgray;
+}
 
 @media (max-width: 768px) {
     .w-200px {
