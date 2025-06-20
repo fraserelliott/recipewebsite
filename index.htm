@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,8 +19,9 @@
 
     <title>Fraser's Recipes</title>
 </head>
+
 <body class="bg-secondary">
-    
+
     <header class="text-white text-center p-3">
         <h1>Fraser's Recipes</h1>
     </header>
@@ -27,7 +29,7 @@
     <!-- Navigation Bar -->
     <nav class="d-flex justify-content-between bg-dark">
         <!-- Spacer to center the nav -->
-        <div class="w-200px"></div> 
+        <div class="w-200px"></div>
 
         <ul class="nav justify-content-center flex-grow-1">
             <li class="nav-item">
@@ -51,32 +53,32 @@
 
         <div class="card-carousel-items">
 
-            <div id="carousel-1" class="card card-carousel-item text-center card-carousel-item-1">
+            <div id="carousel-1" class="card card-carousel-item text-center card-carousel-item-1 no-animate">
                 <img src="./assets/images/recipe1.png" class="card-img-top">
                 <p class="card-body">Hearty pasta with savory meatballs</p>
             </div>
 
-            <div id="carousel-2" class="card card-carousel-item text-center card-carousel-item-2">
+            <div id="carousel-2" class="card card-carousel-item text-center card-carousel-item-2 no-animate">
                 <img src="./assets/images/recipe2.png" class="card-img-top">
                 <p class="card-body">Fresh tomatoes, mozzarella, and basil</p>
             </div>
 
-            <div id="carousel-3" class="card card-carousel-item text-center card-carousel-item-3">
+            <div id="carousel-3" class="card card-carousel-item text-center card-carousel-item-3 no-animate">
                 <img src="./assets/images/recipe3.png" class="card-img-top">
                 <p class="card-body">Fluffy, golden stacks with syrup</p>
             </div>
 
-            <div id="carousel-4" class="card card-carousel-item text-center d-none">
+            <div id="carousel-4" class="card card-carousel-item text-center d-none inactive">
                 <img src="./assets/images/recipe4.png" class="card-img-top">
                 <p class="card-body">Crisp romaine with creamy Caesar dressing</p>
             </div>
 
-            <div id="carousel-5" class="card card-carousel-item text-center d-none">
+            <div id="carousel-5" class="card card-carousel-item text-center d-none inactive">
                 <img src="./assets/images/recipe5.png" class="card-img-top">
                 <p class="card-body">Creamy avocado dip with lime and herbs</p>
             </div>
 
-            <div id="carousel-6" class="card card-carousel-item text-center d-none">
+            <div id="carousel-6" class="card card-carousel-item text-center d-none inactive">
                 <img src="./assets/images/recipe6.png" class="card-img-top">
                 <p class="card-body">Warm, rich, and comforting tomato soup</p>
             </div>
@@ -91,83 +93,8 @@
         &copy; Fraser Elliott 2025
     </footer>
 
-    <script>
-        $(document).ready(function() {
-            var state=1;
-            var maxstate=4; //When the 4th image is on the left, the 6th is on the right so we can't advance any more
-
-            var prevbtn = $('.card-carousel-prev');
-            var nextbtn =  $('.card-carousel-next');
-
-            prevbtn.click(function() {
-                if (state > 1) {
-                    state--;
-                    
-                    //Get the current panel
-                    let item1 = $('.card-carousel-item-1');
-                    let item2 = $('.card-carousel-item-2');
-                    let item3 = $('.card-carousel-item-3');       
-                    
-                    //Move back 1 in the order. The last item needs to be hidden.
-                    item1.removeClass('card-carousel-item-1');
-                    item1.addClass('card-carousel-item-2');
-
-                    item2.removeClass('card-carousel-item-2');
-                    item2.addClass('card-carousel-item-3');
-
-                    item3.removeClass('card-carousel-item-3');
-                    item3.addClass('d-none');
-
-                    //Set card-carousel-item-1. If state is 1 then it's #carousel-1, so it should be #carousel-state
-                    let item4 = $('#carousel-' + state);
-                    item4.removeClass('d-none');
-                    item4.addClass('card-carousel-item-1');
-
-                    if (nextbtn.hasClass('disabled')) {
-                        nextbtn.removeClass('disabled'); //We've now gone backwards so next should be enabled
-                    }
-
-                    if (state==1) {
-                        prevbtn.addClass('disabled'); //disable previous button if it's now at minimum state
-                    }
-                }
-            });
-
-            nextbtn.click(function() {
-                if (state < maxstate) {
-                    state++;
-
-                    //Get the current panel
-                    let item1 = $('.card-carousel-item-1');
-                    let item2 = $('.card-carousel-item-2');
-                    let item3 = $('.card-carousel-item-3');
-
-                    //Move forwards 1 in the order. The first item needs to be hidden.
-                    item1.removeClass('card-carousel-item-1');
-                    item1.addClass('d-none');
-
-                    item2.removeClass('card-carousel-item-2');
-                    item2.addClass('card-carousel-item-1');
-
-                    item3.removeClass('card-carousel-item-3');
-                    item3.addClass('card-carousel-item-2');
-
-                    //Set card-carousel-item-3. If state is 1 then it's #carousel-3, so it should be #carousel-(state+3)
-                    let item4 = $('#carousel-' + (state+2));
-                    item4.removeClass('d-none');
-                    item4.addClass('card-carousel-item-3');
-                    
-                    if (prevbtn.hasClass('disabled')) {
-                        prevbtn.removeClass('disabled'); //We've now gone fowards so previous should be enabled
-                    }
-                    
-                    if (state==maxstate) {
-                        nextbtn.addClass('disabled'); //disable next button if it's now at the maximum state
-                    }
-                }
-            });
-        });
-    </script>
+    <script src="./assets/scripts/carousel.js"></script>
 
 </body>
+
 </html>

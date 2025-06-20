@@ -42,11 +42,19 @@ header {
 }
 
 .card-carousel-item {
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 1;
+    transform: scale(1) translateX(0);
+}
+
+.card-carousel-item.inactive {
+    transition: none;
+    opacity: 0.6;
+    transform: scale(0.9 translateX(10px));
 }
 
 .card-carousel-item:hover {
-    z-index : 5;
+    z-index: 5;
     transform: scale(1.2);
 }
 
@@ -67,6 +75,10 @@ header {
 
 button.disabled {
     color: darkgray;
+}
+
+.no-animate {
+    transition: none !important;
 }
 
 @media (max-width: 768px) {
