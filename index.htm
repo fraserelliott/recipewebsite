@@ -120,10 +120,10 @@
 
                     //Set card-carousel-item-1. If state is 1 then it's #carousel-1, so it should be #carousel-state
                     let item4 = $('#carousel-' + state);
-                    item4.removeClass('disabled');
+                    item4.removeClass('d-none');
                     item4.addClass('card-carousel-item-1');
 
-                    if (nextbtn.hasClass('d-none')) {
+                    if (nextbtn.hasClass('disabled')) {
                         nextbtn.removeClass('disabled'); //We've now gone backwards so next should be enabled
                     }
 
