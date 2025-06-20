@@ -1,5 +1,14 @@
+:root {
+    --bs-secondary-rgb: 250, 243, 224;
+    --secondary-color: #D5CFC7;
+}
+
 header {
     background-image: url("../images/banner.png");
+}
+
+.card {
+    background-color: var(--secondary-color);
 }
 
 .card-carousel {
@@ -52,7 +61,7 @@ header {
     .w-200px {
         width: 100%;
     }
-    
+
     nav {
         flex-direction: column;
     }
