@@ -3,6 +3,11 @@
     --secondary-color: #D5CFC7;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 header {
     background-image: url("../images/banner.png");
 }
@@ -46,6 +51,8 @@ header {
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     opacity: 1;
     transform: scale(1) translateX(0);
+    transform-origin: center center;
+    height: 300px;
 }
 
 .card-carousel-item.inactive {
@@ -57,6 +64,7 @@ header {
 .card-carousel-item:hover {
     z-index: 5;
     transform: scale(1.2);
+    position: relative;
 }
 
 .card-carousel-item.hidden {
