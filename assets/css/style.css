@@ -1,0 +1,59 @@
+header {
+    background-image: url("../images/banner.png");
+}
+
+.card-carousel {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 20px;
+    width: 75%;
+}
+
+.card-carousel-item-1 {
+    position: relative;
+    z-index: 3;
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+.card-carousel-item-2 {
+    position: relative;
+    z-index: 2;
+    grid-area: 1 / 3 / 2 / 6;
+}
+
+.card-carousel-item-3 {
+    position: relative;
+    z-index: 1;
+    grid-area: 1 / 5 / 2 / 8;
+}
+
+.card-carousel-item {
+    transition: transform 0.5s ease-in-out;
+}
+
+.card-carousel-item:hover {
+    z-index : 5;
+    transform: scale(1.2);
+}
+
+/* Custom util classes to extend bootstrap */
+
+.w-md-75 {
+    width: min(75%, 576px);
+}
+
+.w-200px {
+    width: 200px;
+}
+
+
+@media (max-width: 768px) {
+    .w-200px {
+        width: 100%;
+    }
+    
+    nav {
+        flex-direction: column;
+    }
+}
