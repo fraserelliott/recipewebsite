@@ -21,6 +21,7 @@ header {
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: 1fr;
     column-gap: 20px;
+    height: 300px;
 }
 
 .card-carousel-item-1 {
@@ -56,6 +57,11 @@ header {
 .card-carousel-item:hover {
     z-index: 5;
     transform: scale(1.2);
+}
+
+.card-carousel-item.hidden {
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .size-6 {
