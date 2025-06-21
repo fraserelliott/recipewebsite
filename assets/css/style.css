@@ -62,6 +62,8 @@ button.disabled {
 .card-body {
     word-break: normal;
     overflow-wrap: normal;
+    min-height: 3.5em;
+    overflow: hidden;
 }
 
 .carousel-control-prev,
