@@ -3,7 +3,8 @@
     --bs-secondary-rgb: 250, 243, 224;
     --bs-body-color-rgb: 117, 117, 117;
     --bs-dark-rgb: 80, 80, 80;
-    --secondary-color: #D5CFC7;
+    --secondary-color: #C9C2BA;
+    --bs-body-color: rgb(var(--bs-body-color-rgb));
 }
 
 a {
@@ -20,6 +21,10 @@ header {
     width: fit-content;
     max-width: 90%;
     margin: 20px auto;
+}
+
+.recipe li::marker {
+    color: rgb(var(--bs-primary-rgb));
 }
 
 .card-caption {
@@ -49,7 +54,13 @@ header {
     overflow: visible;
 }
 
+
 /* bootstrap overrides */
+
+.shadow {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2),
+            0 0 20px rgba(201, 194, 186, 0.8) !important;
+}
 
 .card {
     background-color: var(--secondary-color);
