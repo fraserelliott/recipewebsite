@@ -12,8 +12,6 @@ header {
     background-image: url("../images/banner.png");
 }
 
-
-
 .card-caption {
     position: absolute;
     bottom: 10px;
@@ -66,17 +64,34 @@ button.disabled {
     overflow-wrap: normal;
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    opacity: 0.8;
+}
+
 .carousel-control-prev {
-    left: -10%;
+    left: -3.5rem;
 }
 
 .carousel-control-next {
-    right: -10%;
+    right: -3.5rem;
 }
 
 
 .carousel-indicators {
     margin-bottom: -2rem;
+}
+
+.carousel {
+    margin: 0 auto;
 }
 
 /* Mobile devices */
@@ -95,18 +110,11 @@ button.disabled {
     }
 
     .mobile-display {
-        display: block;
+        display: flex;
+        justify-content: center;
     }
 
     .desktop-display {
         display: none;
-    }
-
-    .carousel-control-prev {
-        left: -13%;
-    }
-
-    .carousel-control-next {
-        right: -13%;
     }
 }
