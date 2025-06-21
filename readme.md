@@ -1,1 +1,3 @@
 # Fraser's Recipes
+
+This was made for an assignment to use bootstrap and jquery components as part of a responsive website. I started off by making my own carousel as I wanted one with overlapping bootstrap cards, which I achived by using a css grid. This worked very well on larger devices, but on mobile I wanted to change it to a single card per carousel-item. I therefore changed my design to have 2 carousels - 1 that shows with a class desktop-display and 1 that shows with a class mobile-display, with media queries controlling when each are active.
