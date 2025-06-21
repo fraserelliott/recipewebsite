@@ -1,5 +1,8 @@
 :root {
+    --bs-primary-rgb: 33, 33, 33;
     --bs-secondary-rgb: 250, 243, 224;
+    --bs-body-color-rgb: 117, 117, 117;
+    --bs-dark-rgb: 80, 80, 80;
     --secondary-color: #D5CFC7;
 }
 
@@ -10,6 +13,13 @@ a {
 
 header {
     background-image: url("../images/banner.png");
+}
+
+.recipe {
+    background-color: var(--secondary-color);
+    width: fit-content;
+    max-width: 90%;
+    margin: 20px auto;
 }
 
 .card-caption {
@@ -39,7 +49,7 @@ header {
     overflow: visible;
 }
 
-/* bootstrap changes */
+/* bootstrap overrides */
 
 .card {
     background-color: var(--secondary-color);
@@ -50,6 +60,7 @@ header {
     overflow-wrap: normal;
     min-height: 3.5em;
     overflow: hidden;
+    color: rgb(var(--bs-primary-rgb)) !important;
 }
 
 .carousel-control-prev,
@@ -112,5 +123,9 @@ header {
         z-index: 5;
         transform: scale(1.2);
         position: relative;
+    }
+
+    .nav-item:hover {
+        background-color: var(--secondary-color);
     }
 }
