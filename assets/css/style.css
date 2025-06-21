@@ -26,20 +26,6 @@ header {
     white-space: normal;
 }
 
-.card:hover {
-    z-index: 5;
-    transform: scale(1.2);
-    position: relative;
-}
-
-button.disabled {
-    color: darkgray;
-}
-
-.no-animate {
-    transition: none !important;
-}
-
 .filter-invert {
     filter: invert(1);
 }
@@ -118,5 +104,13 @@ button.disabled {
 
     .desktop-display {
         display: none;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .card:hover {
+        z-index: 5;
+        transform: scale(1.2);
+        position: relative;
     }
 }
