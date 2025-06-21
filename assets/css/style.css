@@ -54,6 +54,29 @@ header {
     overflow: visible;
 }
 
+nav {
+    box-shadow: 0 0 0 1px rgba(var(--bs-dark-rgb), 0.5);
+}
+
+#searchbar {
+    border: none;
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 0 1px rgba(var(--bs-dark-rgb), 0.5);
+}
+
+.search-btn {
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    color: rgb(var(--bs-primary-rgb));
+    border: none;
+    box-shadow: 0 0 0 1px rgba(var(--bs-dark-rgb), 0.5);
+    padding: 0.25rem 0.5rem;
+    height: 100%;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
 
 /* bootstrap overrides */
 
@@ -126,6 +149,13 @@ header {
 
     .desktop-display {
         display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    #searchbar,
+    .search-btn {
+        box-shadow: 0 0 0 1px rgba(var(--bs-dark-rgb), 0.1);
     }
 }
 

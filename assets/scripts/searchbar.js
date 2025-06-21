@@ -30,15 +30,19 @@ $(function () {
         }
     });
 
-    searchbar.keypress(function (e) {
+    searchbar.on('keydown', function (e) {
         if (e.which == 13) {
-            let value = searchbar.val().toUpperCase();
-
-            for (let key of searchterms.keys()) {
-                if (key.toUpperCase() === value) {
-                    window.location.href = searchterms.get(key);
-                }
-            }
+            search();
         }
     });
+
+    function search() {
+        let value = searchbar.val().toUpperCase();
+
+        for (let key of searchterms.keys()) {
+            if (key.toUpperCase() === value) {
+                window.location.href = searchterms.get(key);
+            }
+        }
+    }
 });
