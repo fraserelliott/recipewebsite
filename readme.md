@@ -16,3 +16,5 @@ There are a few bootstrap components used here:
 In desktop mode, the carousel uses bootstrap's grid system to display 3 cards. In mobile mode, it switches to 1 card per carousel slide.
 
 Additionally, I have used the jquery autocomplete widget for the search bar. I wrote a script for this that checks for either an enter, selecting an option from the autocomplete, or a search button click (only visible in mobile-display), and takes you to the recipe selected.
+
+https://fraserelliott.github.io/recipewebsite/
