@@ -36,6 +36,10 @@ $(function () {
         }
     });
 
+    $('#searchbutton').click(function() {
+        search();
+    });
+
     function search() {
         let value = searchbar.val().toUpperCase();
 
