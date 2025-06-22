@@ -92,6 +92,7 @@ nav {
 
 .card {
     background-color: var(--secondary-color);
+    transition: 0.3s ease-in-out;
 }
 
 .card-body {
