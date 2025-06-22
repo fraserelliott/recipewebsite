@@ -11,15 +11,6 @@ $(function () {
     searchterms.set("Guacamole", "recipe5.htm")
     searchterms.set("Tomato Soup", "recipe6.htm")
 
-    var availableTags = [
-        "Spaghetti and Meatballs",
-        "Caprese Salad",
-        "Pancakes",
-        "Caesar Salad",
-        "Guacamole",
-        "Tomato Soup"
-    ]
-
     searchbar.autocomplete({
         source: Array.from(searchterms.keys()),
         select: function (event, ui) {
