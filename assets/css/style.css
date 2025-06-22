@@ -1,7 +1,7 @@
 :root {
     --bs-primary-rgb: 33, 33, 33;
     --bs-secondary-rgb: 250, 243, 224;
-    --bs-body-color-rgb: 117, 117, 117;
+    --bs-body-color-rgb: 70, 70, 70;
     --bs-dark-rgb: 80, 80, 80;
     --secondary-color: #C9C2BA;
     --bs-body-color: rgb(var(--bs-body-color-rgb));
