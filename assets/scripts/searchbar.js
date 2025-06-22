@@ -1,8 +1,8 @@
 $(function () {
 
-    var searchbar = $('#searchbar');
+    const searchbar = $('#searchbar');
 
-    var searchterms = new Map();
+    const searchterms = new Map();
 
     searchterms.set("Spaghetti and Meatballs", "recipe1.htm")
     searchterms.set("Caprese Salad", "recipe2.htm")
@@ -14,7 +14,7 @@ $(function () {
     searchbar.autocomplete({
         source: Array.from(searchterms.keys()),
         select: function (event, ui) {
-            var selected = ui.item.value;
+            const selected = ui.item.value;
             if (searchterms.has(selected)) {
                 window.location.href = searchterms.get(selected);
             }
@@ -32,9 +32,9 @@ $(function () {
     });
 
     function search() {
-        let value = searchbar.val().toUpperCase();
+        const value = searchbar.val().toUpperCase();
 
-        for (let key of searchterms.keys()) {
+        for (const key of searchterms.keys()) {
             if (key.toUpperCase() === value) {
                 window.location.href = searchterms.get(key);
             }
